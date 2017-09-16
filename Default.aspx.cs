@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class _Default : Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void Button1Click(object sender, EventArgs e)
+    {
+        Session["SearchKey"] = "%" + TextBox1.Text + "%";
+        Response.Redirect("~/default.aspx");
+    }
+    protected void Button2Click(object sender, EventArgs e)
+    {
+        Session["SearchKey"] = "%%";
+        Response.Redirect("~/default.aspx");
+    }
+    
+}
